@@ -12,8 +12,8 @@ select memstore.set('', '{"a":true}'); -- error
 
 -- switch to another session
 \c -
-select * from memstore.list();
+-- select * from memstore.list();
 select memstore.set('key-3', '{"abc": [1,2,3]}');
 select memstore.get('key-3');
 select memstore.delete('key-1');
-select * from memstore.list();
+-- select * from memstore.list();

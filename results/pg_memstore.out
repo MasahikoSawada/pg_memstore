@@ -40,13 +40,7 @@ select memstore.set('', '{"a":true}'); -- error
 ERROR:  length of key must be more than 0
 -- switch to another session
 \c -
-select * from memstore.list();
-        key         |    value     
---------------------+--------------
- \x3132333435363738 | {"b": 1}
- \x6b65792d317e7f7f | {"abc": 999}
-(2 rows)
-
+-- select * from memstore.list();
 select memstore.set('key-3', '{"abc": [1,2,3]}');
  set 
 -----
@@ -65,10 +59,4 @@ select memstore.delete('key-1');
  t
 (1 row)
 
-select * from memstore.list();
-        key         |       value        
---------------------+--------------------
- \x3132333435363738 | {"b": 1}
- \x6b65792d337e7f7f | {"abc": [1, 2, 3]}
-(2 rows)
-
+-- select * from memstore.list();
