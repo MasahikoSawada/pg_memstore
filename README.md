@@ -10,7 +10,8 @@ A simple in-memory key-value store extension.
 - No trnsactional control
 - No access control
 
-**CAUTION**
+## **CAUTION!!**
+
 These fuctions are diabled due to a bug in radixtree.h
 
 - `memstore.save()`
