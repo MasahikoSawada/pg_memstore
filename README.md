@@ -93,10 +93,10 @@ CREATE EXTENSION
 (1 row)
 
 =# SELECT * from memstore.list();
-        key         |      value
---------------------+------------------
- \x6b65792d317e7f7f | {"a": 999}
- \x6b65792d327e7f7f | {"b": [1, 2, 3]}
+      key       |      value
+----------------+------------------
+ \x6b65792d317e | {"a": 999}
+ \x6b65792d327e | {"b": [1, 2, 3]}
 (2 rows)
 
 =# SELECT memstore.delete('key-1');
@@ -106,9 +106,9 @@ CREATE EXTENSION
 (1 row)
 
 =# SELECT * from memstore.list();
-        key         |      value
---------------------+------------------
- \x6b65792d327e7f7f | {"b": [1, 2, 3]}
+       key      |      value
+----------------+------------------
+ \x6b65792d327e | {"b": [1, 2, 3]}
 (1 row)
 
 =# SELECT memstore.memory_usage();
@@ -124,10 +124,10 @@ CREATE EXTENSION
 
 ```sql
 =# SELECT * from memstore.list();
-        key         |      value
---------------------+------------------
- \x6b65792d317e7f7f | {"a": 999}
- \x6b65792d327e7f7f | {"b": [1, 2, 3]}
+       key      |      value
+----------------+------------------
+ \x6b65792d317e | {"a": 999}
+ \x6b65792d327e | {"b": [1, 2, 3]}
 (2 rows)
 
 =# SELECT memstore.save();
@@ -158,10 +158,10 @@ NOTICE:  loading 2 entries...
 
 =# SELECT * from memstore.list();
 
-        key         |      value
---------------------+------------------
- \x6b65792d317e7f7f | {"a": 999}
- \x6b65792d327e7f7f | {"b": [1, 2, 3]}
+       key      |      value
+----------------+------------------
+ \x6b65792d317e | {"a": 999}
+ \x6b65792d327e | {"b": [1, 2, 3]}
 (2 rows)
 ```
 

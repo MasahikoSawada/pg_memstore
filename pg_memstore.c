@@ -259,7 +259,7 @@ ensure_attach_memstore_shmem(void)
 static inline int64
 make_key(bytea *in)
 {
-	uint64	key;
+	uint64	key = 0;
 	int		key_len = VARSIZE_ANY_EXHDR(in);
 
 	if (key_len == 0)
@@ -278,7 +278,7 @@ make_key(bytea *in)
 						 str, limit, str)));
 	}
 
-	memcpy(&key, VARDATA_ANY(in), sizeof(key));
+	memcpy(&key, VARDATA_ANY(in), key_len);
 
 	return key;
 }
