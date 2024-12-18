@@ -10,6 +10,8 @@ A simple in-memory key-value store extension.
 - No trnsactional control
 - No access control
 
+`pg_memstore` requies PostgreSQL 17 or higher.
+
 ## **CAUTION!!**
 
 These fuctions are diabled due to a bug in radixtree.h
