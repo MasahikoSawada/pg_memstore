@@ -1,0 +1,6 @@
+# pg_memstore extension
+comment = ''
+default_version = '1.0'
+module_pathname = '$libdir/pg_memstore'
+schema = memstore
+relocatable = false
